@@ -36,7 +36,7 @@ defmodule PlugRange.Mixfile do
 
   defp description do
   """
-  An elixir plug that serves HTTP Range Requests
+  An elixir plug that serves HTTP range requests
   """
   end
 
