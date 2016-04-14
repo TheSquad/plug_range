@@ -9,7 +9,7 @@ An [Elixir Plug](http://github.com/elixir-lang/plug) to add HTTP Range Requests
 ```elixir
 def deps do
   # ...
-  {:plug_range, git: "https://github.com/TheSquad/Plug-Range.git", tag: "0.1"}
+  {:plug_range, git: "https://github.com/TheSquad/Plug-Range.git"}
   #...
 end
 ```
