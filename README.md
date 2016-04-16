@@ -24,7 +24,7 @@ defmodule YourApp.Endpoint do
   plug PlugRange
 
   plug Plug.Static,
-  at: "/", from: :louer_un_homme, gzip: false,
+  at: "/", from: :my_project, gzip: false,
   only: ~w(css fonts images js favicon.ico robots.txt)
 
   # ...
