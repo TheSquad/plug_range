@@ -1,7 +1,6 @@
 defmodule PlugRange do
   @behaviour Plug
   @allowed_methods ~w(GET HEAD)
-  import Plug.Conn
 
   def init(options) do
     options
@@ -37,7 +36,7 @@ defmodule PlugRange do
 
               {req_start, length} = case req_start do
                                       -1 -> {filesize - req_end, req_end}
-                                      p -> {req_start, req_end - req_start + 1}
+                                      _ -> {req_start, req_end - req_start + 1}
                                     end
 
               file_end = ( filesize - 2) |> to_string
