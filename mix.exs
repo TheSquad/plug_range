@@ -3,13 +3,13 @@ defmodule PlugRange.Mixfile do
 
   def project do
     [app: :plug_range,
-     version: "0.0.2",
+     version: "0.0.3",
      elixir: "~> 1.2",
-     description: description,
-     package: package,
+     description: description(),
+     package: package(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps()]
   end
 
   # Configuration for the OTP application
@@ -31,8 +31,8 @@ defmodule PlugRange.Mixfile do
 
   defp deps do
     [
-      {:cowboy, "~> 1.0.0"},
-      {:plug, "> 0.8.0"},
+      # {:cowboy, "~> 1.0.0"},
+      {:plug, "> 0.8.0", only: :test, optional: true}
     ]
   end
 

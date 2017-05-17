@@ -1,6 +1,6 @@
 defmodule PlugRange do
   @behaviour Plug
-  @allowed_methods ~w(GET HEAD)
+  # @allowed_methods ~w(GET HEAD)
 
   def init(options) do
     options
@@ -39,7 +39,7 @@ defmodule PlugRange do
                                       _ -> {req_start, req_end - req_start + 1}
                                     end
 
-              file_end = ( filesize - 2) |> to_string
+              # file_end = ( filesize - 2) |> to_string
 
               conn
               |> Plug.Conn.put_resp_header("accept-ranges", "bytes")
@@ -55,8 +55,8 @@ defmodule PlugRange do
   def send_bad_range(conn) do
     conn
     |> Plug.Conn.put_resp_content_type("text/html")
-    |> Plug.Conn.put_resp_header("content-length", bad_range |> String.length |> to_string)
-    |> Plug.Conn.send_resp(416, bad_range)
+    |> Plug.Conn.put_resp_header("content-length", bad_range() |> String.length |> to_string)
+    |> Plug.Conn.send_resp(416, bad_range())
     |> Plug.Conn.halt
   end
 
