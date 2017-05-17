@@ -32,7 +32,8 @@ defmodule PlugRange.Mixfile do
   defp deps do
     [
       # {:cowboy, "~> 1.0.0"},
-      {:plug, "> 0.8.0", only: :test, optional: true}
+      {:plug, ">= 0.0.0", only: :test, optional: true},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 
