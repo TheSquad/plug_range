@@ -1,6 +1,8 @@
-# Plug-Range
+# Plug-Range (DEPRECATED)
 
 An [Elixir Plug](http://github.com/elixir-lang/plug) to add HTTP Range Requests
+
+__This plug is deprecated since phoenix handles now range request__
 
 ## Usage
 
